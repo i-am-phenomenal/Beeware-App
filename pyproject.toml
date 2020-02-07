@@ -1,0 +1,45 @@
+[build-system]
+requires = ["briefcase"]
+
+[tool.briefcase]
+project_name = "beeware_project"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/beeware_app"
+license = "BSD license"
+author = 'Aditya Chaturvedi'
+author_email = "chat29aditya@gmail.com"
+
+[tool.briefcase.app.beeware_app]
+formal_name = "beeware_project"
+description = "Test app in beeware "
+icon = "src/beeware_app/resources/beeware_app"
+sources = ['src/beeware_app']
+requires = []
+
+
+[tool.briefcase.app.beeware_app.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.beeware_app.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.beeware_app.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev18',
+]
+
+# Mobile deployments
+[tool.briefcase.app.beeware_app.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.beeware_app.android]
+requires = [
+    'toga-android>=0.3.0.dev18',
+]
